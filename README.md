@@ -12,7 +12,7 @@ I'm starting out with a small set of testcases from [go-dicom](https://github.co
 
 ### Method
 
-1. Remove PixelData and OverlayData. We don't care about how third-party libraries parse imaging data - we just want to hit the parser. This also significantly reduces the size of the testcases.
+1. Remove `PixelData` and `OverlayData` tags. We don't care about how third-party libraries parse imaging data - we just want to hit the parser. This also significantly reduces the size of the testcases.
 
 ```bash
 dcmodify -ea PixelData -ea OverlayData $INPUT_TESTCASES/*.dcm
