@@ -42,6 +42,8 @@ o.O
 
 Still triaging this one - there is some hardcoded autocorrection that causes DCMTK to repeatedly remove bytes from a Directory Record. It's not clear if this has security implications.
 
+#### Suspicious hang when removing spaces from UI tags
+
 ## Network Protocol
 
 Targeting several binaries - probably `storescp` and `storescu` to start.
