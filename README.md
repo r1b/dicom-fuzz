@@ -1,6 +1,6 @@
 # dicom-fuzz
 
-Fuzzing DCMTK with afl-fuzz.
+Fuzzing [DCMTK](https://dicom.offis.de/dcmtk.php.en) with [afl-fuzz](http://lcamtuf.coredump.cx/afl/).
 
 ## File Format
 
@@ -12,7 +12,7 @@ I'm starting out with a small set of testcases from [go-dicom](https://github.co
 
 ### Method
 
-1. Remove PixelData and OverlayData. We don't care about how third-party libraries parse imaging data - we just want to hit the parser. This also significantly reduces the size of the testcases.
+1. Remove `PixelData` and `OverlayData` tags. We don't care about how third-party libraries parse imaging data - we just want to hit the parser. This also significantly reduces the size of the testcases.
 
 ```bash
 dcmodify -ea PixelData -ea OverlayData $INPUT_TESTCASES/*.dcm
@@ -32,7 +32,7 @@ TODO: Use `afl-tmin` to further reduce the size of the testcases.
 afl-fuzz -i $TESTCASES_DIR -o $FINDINGS_DIR -x dicom.dict /usr/local/bin/dcmdump @@
 ```
 
-`dicom.dict` is included in this repository - it includes the definitations of all known Value Representations. I could include a tag dictionary as well but idk if it will be all that useful.
+`dicom.dict` is included in this repository - it includes the definitions of all known Value Representations. I could include a tag dictionary as well but idk if it will be all that useful.
 
 ### Findings
 
