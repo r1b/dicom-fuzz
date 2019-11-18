@@ -32,7 +32,7 @@ TODO: Use `afl-tmin` to further reduce the size of the testcases.
 afl-fuzz -i $TESTCASES_DIR -o $FINDINGS_DIR -x dicom.dict /usr/local/bin/dcmdump @@
 ```
 
-`dicom.dict` is included in this repository - it includes the definitations of all known Value Representations. I could include a tag dictionary as well but idk if it will be all that useful.
+`dicom.dict` is included in this repository - it includes the definitions of all known Value Representations. I could include a tag dictionary as well but idk if it will be all that useful.
 
 ### Findings
 
