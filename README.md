@@ -1,6 +1,6 @@
 # dicom-fuzz
 
-Fuzzing DCMTK with afl-fuzz.
+Fuzzing [DCMTK](https://dicom.offis.de/dcmtk.php.en) with [afl-fuzz](http://lcamtuf.coredump.cx/afl/).
 
 ## File Format
 
